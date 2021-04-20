@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:id="@+id/tvCreditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/credit_debit_card_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCardNumber"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="01234 56789"
+        android:hint="XXXX-XXXX-XXXX-XXXX"
+        android:inputType="number"
+        android:maxLength="19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditText" />
+
+    <TextView
+        android:id="@+id/tvExpiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Expiry"
+
+        app:layout_constraintBottom_toTopOf="@id/etExpiry"
+        app:layout_constraintEnd_toStartOf="@+id/tvCVV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCardNumber" />
+
+    <com.medhelp.ui.paymentInfo.utils.expiry.ExpirationDateEditText
+        android:hint="mm/yy"
+        android:id="@+id/etExpiry"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:digits="01234567890/"
+        android:inputType="date"
+        android:maxLength="@integer/expiration_date_length_including_slash"
+        app:layout_constraintEnd_toStartOf="@+id/etCVV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExpiry" />
+
+    <TextView
+        android:id="@+id/tvCVV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="CVV"
+        app:layout_constraintBottom_toTopOf="@id/etExpiry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvExpiry"
+        app:layout_constraintTop_toBottomOf="@+id/etCardNumber" />
+
+    <EditText
+        android:id="@+id/etCVV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="CVV"
+        android:maxLength="@integer/maximum_cvv_length"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etExpiry"
+        app:layout_constraintTop_toBottomOf="@+id/tvCVV" />
+
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/black"
+        android:background="@color/purple_500"
+        android:text="Save"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCVV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

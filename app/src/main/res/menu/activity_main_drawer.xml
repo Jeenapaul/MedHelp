@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/menu_option" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/profile_option" />
+        <item
+            android:id="@+id/nav_purchase"
+            android:title="@string/purchse_option" />
+        <item
+            android:id="@+id/nav_cardDetails"
+            android:title="@string/payment_page" />
+    </group>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&#xA;            android:id=&quot;@+id/nav_home&quot;&#xA;            android:title=&quot;@string/menu_option&quot; />&#xA;        &lt;item&#xA;            android:id=&quot;@+id/nav_gallery&quot;" />
+</menu>
